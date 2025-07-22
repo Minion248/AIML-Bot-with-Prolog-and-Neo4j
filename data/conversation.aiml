@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<meta name="language" content="en"/>
+
+<!-- GREETINGS -->
+<category>
+    <pattern>HI</pattern>
+    <template>
+        <random>
+            <li>Hi there!</li>
+            <li>Hello!</li>
+            <li>Hey! How are you?</li>
+        </random>
+    </template>
+</category>
+<category>
+    <pattern>hi</pattern>
+    <template>
+        <random>
+            <li>Hi there!</li>
+            <li>Hello!</li>
+            <li>Hey! How are you?</li>
+        </random>
+    </template>
+</category>
+
+
+<category>
+    <pattern>HELLO</pattern>
+    <template>
+        <random>
+            <li>Hi</li>
+            <li>Hello</li>
+            <li>Hi!! Nice to meet you</li>
+            <li>Greetings :)</li>
+            <li>Hey! Wassup?</li>
+            <li>Nice to meet you!</li>
+            <li>Can you tell me your name by saying "My name is..."?</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>HI *</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+
+<category>
+    <pattern>HELLO *</pattern>
+    <template><srai>HELLO</srai></template>
+</category>
+
+<!-- BYE -->
+<category>
+    <pattern>BYE</pattern>
+    <template>
+        <random>
+            <li>Bye!</li>
+            <li>It was nice talking to you.</li>
+            <li>Tata!</li>
+            <li>Let's talk again soon :)</li>
+            <li>I hope you had a great time!</li>
+            <li>Bye, take care!</li>
+        </random>
+    </template>
+</category>
+
+<category><pattern>BYE *</pattern><template><srai>BYE</srai></template></category>
+<category><pattern>GOODBYE</pattern><template><srai>BYE</srai></template></category>
+<category><pattern>GOODBYE *</pattern><template><srai>BYE</srai></template></category>
+<category><pattern>GOOD BYE</pattern><template><srai>BYE</srai></template></category>
+<category><pattern>GOOD BYE *</pattern><template><srai>BYE</srai></template></category>
+<category><pattern>AM DONE *</pattern><template><srai>BYE</srai></template></category>
+
+<!-- YES/OKAY RESPONSES -->
+<category>
+    <pattern>YES</pattern>
+    <template>
+        <random>
+            <li>So?</li>
+            <li>:)</li>
+            <li>And?</li>
+            <li>Uh huh...</li>
+            <li>Ummm...</li>
+            <li>Hmmm...</li>
+        </random>
+    </template>
+</category>
+
+<category><pattern>OK</pattern><template><srai>YES</srai></template></category>
+<category><pattern>OKAY</pattern><template><srai>YES</srai></template></category>
+<category><pattern>OH</pattern><template><srai>YES</srai></template></category>
+
+<!-- HOW ARE YOU -->
+<category>
+    <pattern>HOW ARE YOU</pattern>
+    <template>
+        <random>
+            <li>I'm doing good. What about you?</li>
+            <li>I am fine. How about you?</li>
+            <li>I'm fine. What about you?</li>
+            <li>I'm okay. And you?</li>
+        </random>
+    </template>
+</category>
+
+<category><pattern>WASSUP</pattern><template><srai>HOW ARE YOU</srai></template></category>
+<category><pattern>HOW ARE YOU DOING</pattern><template><srai>HOW ARE YOU</srai></template></category>
+<category><pattern>HOW ARE YOU DOING *</pattern><template><srai>HOW ARE YOU</srai></template></category>
+<category><pattern>WHAT ABOUT YOU*</pattern><template><srai>HOW ARE YOU</srai></template></category>
+<category><pattern>WBU*</pattern><template><srai>HOW ARE YOU</srai></template></category>
+
+<!-- NAME AND PET NAME -->
+<category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+        <think><set name="name"><star/></set></think>Nice to meet you, <get name="name"/>.
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT IS MY NAME</pattern>
+    <template>
+        Your name is <get name="name"/>.
+    </template>
+</category>
+
+<category>
+    <pattern>MY PET NAME IS *</pattern>
+    <template>
+        <think><set name="petname"><star/></set></think><get name="petname"/> is a cute pet name!
+    </template>
+</category>
+
+<category>
+    <pattern>WHAT IS MY PET NAME</pattern>
+    <template>
+        Your pet name is <get name="petname"/>.
+    </template>
+</category>
+
+</aiml>

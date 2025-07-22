@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+  <category>
+    <pattern>STORE GREETING *</pattern>
+    <template>
+      Got it. I'll store this greeting pattern in motor memory.
+    </template>
+  </category>
+
+  <category>
+    <pattern>SHOW GREETINGS</pattern>
+    <template>
+      Here's what I’ve learned from motor memory...
+    </template>
+  </category>
+
+  <category>
+    <pattern>MOVE FORWARD</pattern>
+    <template>
+      Command acknowledged: move forward. Logging this into motor action memory.
+    </template>
+  </category>
+
+  <category>
+    <pattern>PERFORM ACTION *</pattern>
+    <template>
+      Initiating motor sequence for: <star/>. This will be remembered as an executable pattern.
+    </template>
+  </category>
+
+  <category>
+    <pattern>HOW DO I WALK</pattern>
+    <template>
+      Walking involves a repeated sequence of left and right steps. This motor pattern is saved in procedural memory.
+    </template>
+  </category>
+
+  <category>
+    <pattern>EXECUTE SEQUENCE *</pattern>
+    <template>
+      Executing the stored motor sequence for <star/>. Referencing motor memory graph.
+    </template>
+  </category>
+</aiml>

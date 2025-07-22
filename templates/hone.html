@@ -1,0 +1,1250 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<!DOCTYPE html><html class=''>
+<head>
+<script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
+<script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script>
+<meta charset='UTF-8'><meta name="robots" content="noindex">
+<link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+<link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+<link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+<script src="https://use.typekit.net/hoy3lrg.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+
+<style class="cp-pen-styles">
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.1px;
+  color: #32465a;
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
+}
+
+#frame {
+  width: 95%;
+  min-width: 360px;
+  max-width: 1000px;
+  height: 92vh;
+  min-height: 300px;
+  max-height: 720px;
+  background: #E6EAEA;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+#frame:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+}
+@media screen and (max-width: 360px) {
+  #frame {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+#frame #sidepanel {
+  float: left;
+  min-width: 280px;
+  max-width: 340px;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to bottom, #4a00e0, #8e2de2);
+  color: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel {
+    width: 58px;
+    min-width: 58px;
+  }
+}
+#frame #sidepanel #profile {
+  width: 80%;
+  margin: 25px auto;
+  text-align: center;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+    background: rgba(0,0,0,0.1);
+  }
+}
+#frame #sidepanel #profile.expanded .wrap {
+  height: 210px;
+  line-height: initial;
+}
+#frame #sidepanel #profile.expanded .wrap p {
+  margin-top: 20px;
+}
+#frame #sidepanel #profile.expanded .wrap i.expand-button {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+#frame #sidepanel #profile .wrap {
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  -moz-transition: 0.3s height ease;
+  -o-transition: 0.3s height ease;
+  -webkit-transition: 0.3s height ease;
+  transition: 0.3s height ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap {
+    height: 55px;
+  }
+}
+#frame #sidepanel #profile .wrap img {
+  width: 50px;
+  border-radius: 50%;
+  padding: 3px;
+  border: 2px solid #e74c3c;
+  height: auto;
+  float: left;
+  cursor: pointer;
+  -moz-transition: 0.3s border ease;
+  -o-transition: 0.3s border ease;
+  -webkit-transition: 0.3s border ease;
+  transition: 0.3s border ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap img {
+    width: 40px;
+    margin-left: 4px;
+  }
+}
+#frame #sidepanel #profile .wrap img.online {
+  border: 2px solid #2ecc71;
+}
+#frame #sidepanel #profile .wrap img.away {
+  border: 2px solid #f1c40f;
+}
+#frame #sidepanel #profile .wrap img.busy {
+  border: 2px solid #e74c3c;
+}
+#frame #sidepanel #profile .wrap img.offline {
+  border: 2px solid #95a5a6;
+}
+#frame #sidepanel #profile .wrap p {
+  float: left;
+  margin-left: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap p {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap i.expand-button {
+  float: right;
+  margin-top: 23px;
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.8;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap i.expand-button {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  width: 150px;
+  margin: 70px 0 0 0;
+  border-radius: 6px;
+  z-index: 99;
+  line-height: initial;
+  background: rgba(255,255,255,0.9);
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options {
+    width: 58px;
+    margin-top: 57px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options.active {
+  opacity: 1;
+  visibility: visible;
+  margin: 75px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options.active {
+    margin-top: 62px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid rgba(255,255,255,0.9);
+  margin: -8px 0 0 24px;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options:before {
+    margin-left: 23px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul {
+  overflow: hidden;
+  border-radius: 6px;
+}
+#frame #sidepanel #profile .wrap #status-options ul li {
+  padding: 15px 0 30px 18px;
+  display: block;
+  cursor: pointer;
+  color: #333;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li {
+    padding: 15px 0 35px 22px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li:hover {
+  background: rgba(0,0,0,0.05);
+}
+#frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
+    width: 14px;
+    height: 14px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -3px 0 0 -3px;
+  background: transparent;
+  border-radius: 50%;
+  z-index: 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li span.status-circle:before {
+    height: 18px;
+    width: 18px;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li p {
+  padding-left: 12px;
+  color: #333;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #profile .wrap #status-options ul li p {
+    display: none;
+  }
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-online span.status-circle {
+  background: #2ecc71;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-online.active span.status-circle:before {
+  border: 1px solid #2ecc71;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-away span.status-circle {
+  background: #f1c40f;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-away.active span.status-circle:before {
+  border: 1px solid #f1c40f;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-busy span.status-circle {
+  background: #e74c3c;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-busy.active span.status-circle:before {
+  border: 1px solid #e74c3c;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-offline span.status-circle {
+  background: #95a5a6;
+}
+#frame #sidepanel #profile .wrap #status-options ul li#status-offline.active span.status-circle:before {
+  border: 1px solid #95a5a6;
+}
+#frame #sidepanel #profile .wrap #expanded {
+  padding: 100px 0 0 0;
+  display: block;
+  line-height: initial !important;
+}
+#frame #sidepanel #profile .wrap #expanded label {
+  float: left;
+  clear: both;
+  margin: 0 8px 5px 0;
+  padding: 5px 0;
+}
+#frame #sidepanel #profile .wrap #expanded input {
+  border: none;
+  margin-bottom: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 3px;
+  color: #f5f5f5;
+  padding: 7px;
+  width: calc(100% - 43px);
+}
+#frame #sidepanel #profile .wrap #expanded input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.2);
+}
+#frame #sidepanel #search {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-weight: 300;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #search {
+    display: none;
+  }
+}
+#frame #sidepanel #search label {
+  position: absolute;
+  margin: 10px 0 0 20px;
+  color: rgba(255,255,255,0.7);
+}
+#frame #sidepanel #search input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  padding: 10px 0 10px 46px;
+  width: calc(100% - 25px);
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #f5f5f5;
+}
+#frame #sidepanel #search input:focus {
+  outline: none;
+  background: rgba(255,255,255,0.2);
+}
+#frame #sidepanel #search input::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.7);
+}
+#frame #sidepanel #search input::-moz-placeholder {
+  color: rgba(255,255,255,0.7);
+}
+#frame #sidepanel #search input:-ms-input-placeholder {
+  color: rgba(255,255,255,0.7);
+}
+#frame #sidepanel #search input:-moz-placeholder {
+  color: rgba(255,255,255,0.7);
+}
+#frame #sidepanel #contacts {
+  height: calc(100% - 177px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts {
+    height: calc(100% - 149px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #frame #sidepanel #contacts::-webkit-scrollbar {
+    display: none;
+  }
+}
+#frame #sidepanel #contacts.expanded {
+  height: calc(100% - 334px);
+}
+#frame #sidepanel #contacts::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+#frame #sidepanel #contacts::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
+}
+#frame #sidepanel #contacts ul li.contact {
+  position: relative;
+  padding: 10px 0 15px 0;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact {
+    padding: 6px 0 46px 8px;
+  }
+}
+#frame #sidepanel #contacts ul li.contact:hover {
+  background: rgba(255,255,255,0.1);
+}
+#frame #sidepanel #contacts ul li.contact.active {
+  background: rgba(255,255,255,0.1);
+  border-right: 5px solid rgba(255,255,255,0.3);
+}
+#frame #sidepanel #contacts ul li.contact.active span.contact-status {
+  border: 2px solid rgba(255,255,255,0.1) !important;
+}
+#frame #sidepanel #contacts ul li.contact .wrap {
+  width: 88%;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap {
+    width: 100%;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap span {
+  position: absolute;
+  left: 0;
+  margin: -2px 0 0 -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: #95a5a6;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.online {
+  background: #2ecc71;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.away {
+  background: #f1c40f;
+}
+#frame #sidepanel #contacts ul li.contact .wrap span.busy {
+  background: #e74c3c;
+}
+#frame #sidepanel #contacts ul li.contact .wrap img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap img {
+    margin-right: 0px;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta {
+  padding: 5px 0 0 0;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #contacts ul li.contact .wrap .meta {
+    display: none;
+  }
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .name {
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .preview {
+  margin: 5px 0 0 0;
+  padding: 0 0 1px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+  color: rgba(255,255,255,0.7);
+}
+#frame #sidepanel #contacts ul li.contact .wrap .meta .preview span {
+  position: initial;
+  border-radius: initial;
+  background: none;
+  border: none;
+  padding: 0 2px 0 0;
+  margin: 0 0 0 1px;
+  opacity: .5;
+}
+#frame #sidepanel #bottom-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+#frame #sidepanel #bottom-bar button {
+  float: left;
+  border: none;
+  width: 50%;
+  padding: 10px 0;
+  background: rgba(255,255,255,0.1);
+  color: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button {
+    float: none;
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+#frame #sidepanel #bottom-bar button:focus {
+  outline: none;
+}
+#frame #sidepanel #bottom-bar button:nth-child(1) {
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button:nth-child(1) {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+}
+#frame #sidepanel #bottom-bar button:hover {
+  background: rgba(255,255,255,0.2);
+}
+#frame #sidepanel #bottom-bar button i {
+  margin-right: 3px;
+  font-size: 1em;
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button i {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 735px) {
+  #frame #sidepanel #bottom-bar button span {
+    display: none;
+  }
+}
+#frame .content {
+  float: right;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 735px) {
+  #frame .content {
+    width: calc(100% - 58px);
+    min-width: 300px !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  #frame .content {
+    width: calc(100% - 340px);
+  }
+}
+#frame .content .contact-profile {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+#frame .content .contact-profile img {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 9px 12px 0 9px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+#frame .content .contact-profile p {
+  float: left;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+#frame .content .contact-profile .social-media {
+  float: right;
+}
+#frame .content .contact-profile .social-media i {
+  margin-left: 14px;
+  cursor: pointer;
+  color: rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+}
+#frame .content .contact-profile .social-media i:nth-last-child(1) {
+  margin-right: 20px;
+}
+#frame .content .contact-profile .social-media i:hover {
+  color: white;
+  transform: scale(1.1);
+}
+#frame .content .messages {
+  height: auto;
+  min-height: calc(100% - 93px);
+  max-height: calc(100% - 93px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: url('https://www.transparenttextures.com/patterns/light-wool.png');
+}
+@media screen and (max-width: 735px) {
+  #frame .content .messages {
+    max-height: calc(100% - 105px);
+  }
+}
+#frame .content .messages::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+#frame .content .messages::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+#frame .content .messages ul li {
+  display: inline-block;
+  clear: both;
+  float: left;
+  margin: 15px 15px 5px 15px;
+  width: calc(100% - 25px);
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+#frame .content .messages ul li:hover {
+  transform: translateY(-2px);
+}
+#frame .content .messages ul li:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+#frame .content .messages ul li.sent img {
+  margin: 6px 8px 0 0;
+}
+#frame .content .messages ul li.sent p {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  color: #f5f5f5;
+  box-shadow: 0 3px 10px rgba(74, 0, 224, 0.2);
+}
+#frame .content .messages ul li.replies img {
+  float: right;
+  margin: 6px 0 0 8px;
+}
+#frame .content .messages ul li.replies p {
+  background: #f5f5f5;
+  float: right;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+#frame .content .messages ul li img {
+  width: 22px;
+  border-radius: 50%;
+  float: left;
+  transition: all 0.3s ease;
+}
+#frame .content .messages ul li img:hover {
+  transform: rotate(15deg);
+}
+#frame .content .messages ul li p {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 205px;
+  line-height: 130%;
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 735px) {
+  #frame .content .messages ul li p {
+    max-width: 300px;
+  }
+}
+
+/* Conversation Graph Styles */
+.conversation-graph {
+  padding: 15px;
+  background: white;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: none;
+}
+
+#conversation-graph {
+  height: 300px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: white;
+}
+
+/* User avatar styles */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+/* Message input styles */
+#frame .content .message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  background: rgba(255,255,255,0.9);
+  padding: 10px 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+}
+
+#frame .content .message-input .wrap {
+  position: relative;
+}
+
+#frame .content .message-input .wrap input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+  float: left;
+  border: none;
+  width: calc(100% - 90px);
+  padding: 11px 32px 10px 8px;
+  font-size: 0.8em;
+  color: #32465a;
+  background: rgba(0,0,0,0.05);
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+#frame .content .message-input .wrap input:focus {
+  outline: none;
+  background: rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 2px rgba(74, 0, 224, 0.2);
+}
+
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap input {
+    padding: 15px 32px 16px 8px;
+  }
+}
+
+#frame .content .message-input .wrap .attachment {
+  position: absolute;
+  right: 60px;
+  z-index: 4;
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #8e2de2;
+  opacity: .5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap .attachment {
+    margin-top: 17px;
+    right: 65px;
+  }
+}
+
+#frame .content .message-input .wrap .attachment:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#frame .content .message-input .wrap button {
+  float: right;
+  border: none;
+  width: 50px;
+  padding: 12px 0;
+  cursor: pointer;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  color: #f5f5f5;
+  border-radius: 0 20px 20px 0;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 735px) {
+  #frame .content .message-input .wrap button {
+    padding: 16px 0;
+  }
+}
+
+#frame .content .message-input .wrap button:hover {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  transform: translateX(2px);
+}
+
+#frame .content .message-input .wrap button:focus {
+  outline: none;
+}
+
+/* Settings dropdown styles */
+.settings-dropdown {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  padding: 10px;
+  z-index: 100;
+  display: none;
+}
+
+.settings-dropdown.active {
+  display: block;
+}
+
+.settings-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-dropdown ul li {
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.settings-dropdown ul li:hover {
+  background: rgba(74, 0, 224, 0.1);
+}
+
+.settings-dropdown ul li i {
+  margin-right: 8px;
+  color: #8e2de2;
+}
+
+/* Graph node styles */
+.node text {
+  font-size: 10px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node.user circle {
+  fill: #4a00e0;
+}
+
+.node.bot circle {
+  fill: #8e2de2;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<div id="frame">
+  <div id="sidepanel">
+    <div id="profile">
+      <div class="wrap">
+        <img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" />
+        <p id="username">{{ user_id }}</p>
+        <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+        <div id="status-options">
+          <ul>
+            <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+            <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+            <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+            <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="search">
+      <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+      <input type="text" placeholder="Search contacts..." />
+    </div>
+    <div id="contacts">
+      <ul>
+        <li class="contact active">
+          <div class="wrap">
+            <span class="contact-status online"></span>
+            <img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" />
+            <div class="meta">
+              <p class="name">YASNA</p>
+              <p class="preview">Your AI Assistant</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="bottom-bar">
+      <button id="conversation-graph-btn"><i class="fa fa-project-diagram fa-fw" aria-hidden="true"></i> <span>Conversation Graph</span></button>
+      <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="contact-profile">
+      <img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" />
+      <p>YASNA</p>
+      <div class="social-media">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+        <i class="fa fa-smile-o" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="messages">
+      <ul id="chat-messages">
+        <li class="sent">
+          <img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" />
+          <p>Hello! Please write your message to start chatting with YASNA.</p>
+        </li>
+        <li class="replies">
+          <img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" />
+          <p>Hello! I'm YASNA, your AI assistant. How can I help you today?</p>
+        </li>
+        <li class="replies">
+          <img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" />
+          <p>Try saying:<br>
+          - Add fact AI is the future<br>
+          - What is AI?<br>
+          - Analyze I love technology<br>
+          - Store greeting Hello, Sir!<br>
+          - Show greetings<br>
+          - father_of(simon, X).<br>
+          </p>
+        </li>
+      </ul>
+
+      <div class="conversation-graph" id="conversation-graph-container">
+        <h4>Conversation Flow</h4>
+        <div id="conversation-graph"></div>
+      </div>
+    </div>
+    <div class="message-input">
+      <div class="wrap">
+          <div id="userInput">
+              <input id="textInput" type="text" name="msg" placeholder="Write your message..." />
+              <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+              <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Settings dropdown -->
+<div class="settings-dropdown" id="settings-dropdown">
+  <ul>
+    <li id="show-conversation-graph"><i class="fa fa-project-diagram"></i> Show Conversation Graph</li>
+    <li id="view-neo4j"><i class="fa fa-database"></i> View in Neo4j</li>
+    <li id="reset-chat"><i class="fa fa-trash"></i> Reset Chat</li>
+  </ul>
+</div>
+
+<!-- Tooltip div -->
+<div class="tooltip" id="graph-tooltip" style="display: none;"></div>
+
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  // Initialize chat
+  $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+  // Set username from template variable
+  var username = "{{ user_id }}";
+  if(username && username.trim() !== "") {
+    $("#username").text(username);
+  }
+
+  // Profile dropdown
+  $(".expand-button").click(function() {
+    $("#status-options").toggleClass("active");
+  });
+
+  // Expand button
+  $(".expand-button").click(function() {
+    $("#profile").toggleClass("expanded");
+    $("#contacts").toggleClass("expanded");
+  });
+
+  // Status options
+  $("#status-options ul li").click(function() {
+    $("#status-online").removeClass("active");
+    $("#status-away").removeClass("active");
+    $("#status-busy").removeClass("active");
+    $("#status-offline").removeClass("active");
+    $(this).addClass("active");
+    $("#status-options").removeClass("active");
+  });
+
+  // Send message function
+  function sendMessage() {
+    var message = $("#textInput").val().trim();
+    if(message === '') return false;
+
+    // Add user message with typing animation
+    var $userMessage = $('<li class="sent"><img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" /><p>' + message + '</p></li>').hide();
+    $('.messages ul').append($userMessage);
+    $userMessage.fadeIn(300);
+
+    // Clear input
+    $("#textInput").val('');
+
+    // Scroll to bottom
+    $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+    // Get bot response
+    $.get("/get", { msg: message }).done(function(data) {
+      // Add bot response with typing animation
+      var $botMessage = $('<li class="replies"><img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" /><p>' + data.response + '</p></li>').hide();
+
+      $('.messages ul').append($botMessage);
+      $botMessage.fadeIn(600);
+      $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+
+      // Update preview
+      $('.contact.active .preview').html('<span>You: </span>' + message);
+
+      // Update graph if visible
+      if($("#conversation-graph-container").is(":visible")) {
+        updateConversationGraph();
+      }
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+      console.error("Error getting bot response: " + textStatus, errorThrown);
+      var $errorMessage = $('<li class="replies"><img src="https://storage.googleapis.com/regalflowers-cdn-staging/blog/img-2024-07-FRESH-CUT-WHITE-ROSE.jpg" class="online" alt="" /><p>Error: Could not reach the bot. Check console.</p></li>').hide();
+      $('.messages ul').append($errorMessage);
+      $errorMessage.fadeIn(600);
+      $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+    });
+  }
+
+  // Send button click
+  $('.submit').click(function(e) {
+    e.preventDefault();
+    sendMessage();
+  });
+
+  // Enter key press
+  $(window).on('keydown', function(e) {
+    if (e.which == 13) {
+      if ($("#textInput").is(":focus")) {
+        sendMessage();
+        return false;
+      }
+    }
+  });
+
+  // Toggle conversation graph
+  $("#conversation-graph-btn, #show-conversation-graph").click(function() {
+    $("#conversation-graph-container").toggle();
+    if($("#conversation-graph-container").is(":visible")) {
+      updateConversationGraph();
+    }
+    $("#settings-dropdown").removeClass("active");
+  });
+
+  // Toggle settings dropdown
+  $("#settings").click(function(e) {
+    e.stopPropagation();
+    $("#settings-dropdown").toggleClass("active");
+  });
+
+  // Close settings dropdown when clicking elsewhere
+  $(document).click(function() {
+    $("#settings-dropdown").removeClass("active");
+  });
+
+  // View in Neo4j
+  $("#view-neo4j").click(function() {
+    window.open("/social/network", "_blank");
+    $("#settings-dropdown").removeClass("active");
+  });
+
+  // Reset chat
+  $("#reset-chat").click(function() {
+    if(confirm("Are you sure you want to reset the chat?")) {
+      $("#chat-messages").html("");
+      $("#settings-dropdown").removeClass("active");
+      updateConversationGraph();
+    }
+  });
+
+  // Update conversation graph visualization
+  function updateConversationGraph() {
+    // Get all messages from the chat
+    const messages = [];
+    let counter = 0;
+
+    $("#chat-messages li").each(function() {
+      counter++;
+      const isBot = $(this).hasClass("replies");
+      const text = $(this).find("p").text();
+      const truncatedText = text.length > 30 ? text.substring(0, 30) + "..." : text;
+
+      messages.push({
+        id: "msg_" + counter,
+        type: isBot ? "bot" : "user",
+        text: text,
+        displayText: truncatedText,
+        isBot: isBot
+      });
+    });
+
+    // Create links between consecutive messages
+    const links = [];
+    for (let i = 0; i < messages.length - 1; i++) {
+      links.push({
+        source: messages[i].id,
+        target: messages[i + 1].id,
+        type: "reply_to"
+      });
+    }
+
+    // Render the conversation graph
+    renderConversationGraph({
+      nodes: messages,
+      links: links
+    });
+  }
+
+  // Render conversation graph using D3.js
+  function renderConversationGraph(graphData) {
+    const width = $("#conversation-graph").width();
+    const height = 300;
+    const tooltip = d3.select("#graph-tooltip");
+
+    // Clear previous graph
+    $("#conversation-graph").html("");
+
+    // Create SVG
+    const svg = d3.select("#conversation-graph")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    // Create simulation
+    const simulation = d3.forceSimulation(graphData.nodes)
+      .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(100))
+      .force("charge", d3.forceManyBody().strength(-200))
+      .force("center", d3.forceCenter(width / 2, height / 2))
+      .force("x", d3.forceX(width / 2).strength(0.1))
+      .force("y", d3.forceY(height / 2).strength(0.1));
+
+    // Create links
+    const link = svg.append("g")
+      .selectAll("line")
+      .data(graphData.links)
+      .enter().append("line")
+      .attr("class", "link")
+      .attr("stroke", "#999")
+      .attr("stroke-opacity", 0.6)
+      .attr("stroke-width", 1);
+
+    // Create nodes
+    const node = svg.append("g")
+      .selectAll("g")
+      .data(graphData.nodes)
+      .enter().append("g")
+      .call(d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended));
+
+    // Add circles to nodes
+    node.append("circle")
+      .attr("r", 10)
+      .attr("fill", d => d.isBot ? "#8e2de2" : "#4a00e0")
+      .attr("class", d => "node " + (d.isBot ? "bot" : "user"))
+      .on("mouseover", function(event, d) {
+        tooltip.style("display", "block")
+          .html(d.text)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      })
+      .on("mouseout", function() {
+        tooltip.style("display", "none");
+      });
+
+    // Add text to nodes
+    node.append("text")
+      .attr("dy", 4)
+      .attr("text-anchor", "middle")
+      .text(d => d.isBot ? "B" : "U")
+      .attr("fill", "white")
+      .attr("font-size", "10px");
+
+    // Add labels to nodes
+    node.append("text")
+      .attr("dy", 25)
+      .attr("text-anchor", "middle")
+      .text(d => d.displayText)
+      .attr("font-size", "10px")
+      .attr("fill", "#333");
+
+    // Update positions on each tick
+    simulation.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node
+        .attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+
+    // Drag functions
+    function dragstarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragended(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+  }
+
+  // Initial graph update
+  updateConversationGraph();
+});
+</script>
+</body>
+</html>

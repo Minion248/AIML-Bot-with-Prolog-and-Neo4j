@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <!-- ============================================= -->
+  <!-- Memory Recall Patterns                       -->
+  <!-- ============================================= -->
+
+  <category>
+    <pattern>WHAT DID WE TALK ABOUT *</pattern>
+    <template>
+      <think>
+        <set name="search_query"><star/></set>
+      </think>
+      Checking my memory about <get name="search_query"/>...
+      <srai>RECALL MEMORIES <get name="search_query"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>RECALL LAST * CONVERSATIONS</pattern>
+    <template>
+      <think>
+        <set name="recall_limit"><star/></set>
+      </think>
+      <condition name="recall_limit">
+        <li value="1">Recalling our last conversation...</li>
+        <li>Recalling last <get name="recall_limit"/> interactions...</li>
+      </condition>
+      <memory_recall>last <get name="recall_limit"/></memory_recall>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DO YOU REMEMBER *</pattern>
+    <template>
+      Let me check my memory about <star/>...
+      <srai>RECALL MEMORIES <star/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT DID WE SAY ABOUT *</pattern>
+    <template>
+      Searching my conversations about <star/>...
+      <srai>RECALL MEMORIES <star/></srai>
+    </template>
+  </category>
+
+  <!-- ============================================= -->
+  <!-- Memory Recall Handlers                       -->
+  <!-- ============================================= -->
+
+  <category>
+    <pattern>RECALL MEMORIES *</pattern>
+    <template>
+      Here's what I remember about <star/>:
+      <memory_recall><star/></memory_recall>
+    </template>
+  </category>
+
+  <category>
+    <pattern>CHECKING MY MEMORY ABOUT *</pattern>
+    <template>
+      <srai>RECALL MEMORIES <star/></srai>
+    </template>
+  </category>
+
+  <!-- ============================================= -->
+  <!-- Special Case Handlers                        -->
+  <!-- ============================================= -->
+
+  <category>
+    <pattern>WHAT WAS OUR LAST CONVERSATION</pattern>
+    <template>
+      <memory_recall>last 1</memory_recall>
+    </template>
+  </category>
+
+  <category>
+    <pattern>TELL ME WHAT WE DISCUSSED</pattern>
+    <template>
+      Here's our recent conversation history:
+      <memory_recall>last 5</memory_recall>
+    </template>
+  </category>
+
+</aiml>

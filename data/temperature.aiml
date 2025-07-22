@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- Option 1: Using <condition> tag -->
+<category>
+  <pattern>WHAT IS THE TEMPERATURE</pattern>
+  <template>
+    <condition name="current_temp">
+      <li value="unknown">Temperature data is not currently available.</li>
+      <li>The current temperature is <get name="current_temp"/>°C.</li>
+    </condition>
+  </template>
+</category>
+
+<!-- Option 2: Using <think> and <set> for default values -->
+<category>
+  <pattern>CURRENT TEMP</pattern>
+  <template>
+    <think>
+      <set name="temp_response">
+        <condition name="current_temp">
+          <li value="unknown">No temperature data</li>
+          <li><get name="current_temp"/>°C</li>
+        </condition>
+      </set>
+    </think>
+    The temperature is: <get name="temp_response"/>
+  </template>
+</category>
+
+<!-- Option 3: Simple get with default (requires programmatic support) -->
+<category>
+  <pattern>TELL ME TEMPERATURE</pattern>
+  <template>
+    Temperature: <get name="current_temp" default="not available"/>°C
+  </template>
+</category>
+
+</aiml>

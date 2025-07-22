@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+  <category>
+    <pattern>ANALYZE *</pattern>
+    <template>
+      Analyzing your sentence for meaning, emotion, and identity...
+    </template>
+  </category>
+
+  <category>
+    <pattern>I FEEL *</pattern>
+    <template>
+      I'll evaluate your emotional state and add this to PAM memory.
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>ANALYZE *</pattern>
+    <template>
+      Let's analyze: <star/>. I will apply POS tagging, Named Entity Recognition, sentiment analysis, and gender inference now.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I FEEL *</pattern>
+    <template>
+      You mentioned feeling <star/>. I'll evaluate your emotional state and add this to your PAM in Neo4j.
+    </template>
+  </category>
+
+  <category>
+    <pattern>FOCUS ON *</pattern>
+    <template>
+      Setting focus to <star/>. It will now be the center of active memory processing (PAM).
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT AM I THINKING ABOUT</pattern>
+    <template>
+      You're currently focused on <get name="focus"/>. Let me know if you want to shift attention.
+    </template>
+  </category>
+</aiml>

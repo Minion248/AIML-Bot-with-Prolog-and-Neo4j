@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<!-- Male Statements -->
+<category>
+    <pattern>I AM MALE</pattern>
+    <template>
+        Got it! Setting your gender as male.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I AM A MALE</pattern>
+    <template>
+        Noted, you're male.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I'M MALE</pattern>
+    <template>
+        Okay, gender is set to male.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I AM A MAN</pattern>
+    <template>
+        You're a man. Gender saved.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I'M A MAN</pattern>
+    <template>
+        You are a man. Gender noted.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>MY GENDER IS MALE</pattern>
+    <template>
+        Thanks! Gender updated to male.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I IDENTIFY AS MALE</pattern>
+    <template>
+        Alright! Gender set to male.
+        <think><set name="gender">male</set></think>
+    </template>
+</category>
+
+<!-- Female Statements -->
+<category>
+    <pattern>I AM FEMALE</pattern>
+    <template>
+        Got it! Setting your gender as female.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I AM A FEMALE</pattern>
+    <template>
+        Noted, you're female.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I'M FEMALE</pattern>
+    <template>
+        Okay, gender is set to female.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I AM A WOMAN</pattern>
+    <template>
+        You're a woman. Gender saved.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I'M A WOMAN</pattern>
+    <template>
+        You are a woman. Gender noted.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>MY GENDER IS FEMALE</pattern>
+    <template>
+        Thanks! Gender updated to female.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+<category>
+    <pattern>I IDENTIFY AS FEMALE</pattern>
+    <template>
+        Alright! Gender set to female.
+        <think><set name="gender">female</set></think>
+    </template>
+</category>
+
+</aiml>

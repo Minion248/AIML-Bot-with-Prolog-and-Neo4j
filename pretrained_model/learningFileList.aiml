@@ -1,0 +1,26 @@
+<aiml version="1.0">
+    <category>
+        <pattern>LOAD AIML</pattern>
+        <template>
+            <!-- Load all AIML knowledge files -->
+            <learn>./data/conversation.aiml</learn>
+            <learn>./data/ai.aiml</learn>
+            <learn>./data/food.aiml</learn>
+            <learn>./data/family.aiml</learn>
+            <learn>./data/temperature.aiml</learn>
+            <learn>./data/knowledge.aiml</learn>
+            <learn>./data/user_dob_facts.aiml</learn>
+            <learn>./data/user_gender_facts.aiml</learn>
+            <learn>./data/user_married_facts.aiml</learn>
+            <learn>./data/user_query.aiml</learn>
+            <learn>./data/user_relations_facts.aiml</learn>
+            <learn>./data/words.aiml</learn>
+            <learn>./data/social.aiml</learn>
+            <learn>./data/sensory.aiml</learn>
+            <learn>./data/semantic.aiml</learn>
+            <learn>./data/pam.aiml</learn>
+            <learn>./data/motor.aiml</learn>
+            <learn>./data/episodic.aiml</learn>
+        </template>
+    </category>
+</aiml>

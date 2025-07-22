@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+  <category>
+    <pattern>MY DATE OF BIRTH IS *</pattern>
+    <template>
+      <think><set name="dob"><star/></set></think>
+      Noted! Your birth date is <get name="dob"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS MY DATE OF BIRTH</pattern>
+    <template>
+      Your date of birth is <get name="dob"/>.
+    </template>
+  </category>
+
+</aiml>

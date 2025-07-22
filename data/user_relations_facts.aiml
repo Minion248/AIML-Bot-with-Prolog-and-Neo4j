@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+  <category>
+    <pattern>I AM THE * OF *</pattern>
+    <template>
+      <think><set name="relation"><star index="1"/></set><set name="person"><star index="2"/></set></think>
+      Thanks! You are the <star index="1"/> of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM * OF *</pattern>
+    <template>
+      <think><set name="relation"><star index="1"/></set><set name="person"><star index="2"/></set></think>
+      Thanks! You are <star index="1"/> of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS MY *</pattern>
+    <template>
+      <think><set name="person"><star index="1"/></set><set name="relation"><star index="2"/></set></think>
+      Got it! <star index="1"/> is your <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>MY * IS *</pattern>
+    <template>
+      <think><set name="relation"><star index="1"/></set><set name="person"><star index="2"/></set></think>
+      Okay, your <star index="1"/> is <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE A * NAMED *</pattern>
+    <template>
+      <think><set name="relation"><star index="1"/></set><set name="person"><star index="2"/></set></think>
+      Thank you. You have a <star index="1"/> named <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS RELATED TO ME AS *</pattern>
+    <template>
+      <think><set name="person"><star index="1"/></set><set name="relation"><star index="2"/></set></think>
+      Noted. <star index="1"/> is your <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* OF MINE IS *</pattern>
+    <template>
+      <think><set name="relation"><star index="1"/></set><set name="person"><star index="2"/></set></think>
+      Okay! Your <star index="1"/> is <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM THE PARENT OF *</pattern>
+    <template>
+      Okay, you are the parent of <star/>.
+      <think><set name="relation">parent</set><set name="person"><star/></set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM PARENT OF *</pattern>
+    <template>
+      Noted, parent of <star/>.
+      <think><set name="relation">parent</set><set name="person"><star/></set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM THE FATHER OF *</pattern>
+    <template>
+      Got it, you are the father of <star/>.
+      <think><set name="relation">father</set><set name="person"><star/></set><set name="gender">male</set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM THE MOTHER OF *</pattern>
+    <template>
+      Got it, you are the mother of <star/>.
+      <think><set name="relation">mother</set><set name="person"><star/></set><set name="gender">female</set></think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS MY SON</pattern>
+    <template>
+      <think><set name="relation">father</set><set name="person"><star/></set><set name="gender">male</set></think>
+      Okay, <star/> is your son.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS MY DAUGHTER</pattern>
+    <template>
+      <think><set name="daughter"><star/></set></think>
+      Thanks! I've saved that <get name="daughter"/> is your daughter.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHO IS MY DAUGHTER</pattern>
+    <template>
+      Your daughter is <get name="daughter"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS MY CHILD</pattern>
+    <template>
+      Got it, <star/> is your child.
+      <think><set name="relation">parent</set><set name="person"><star/></set></think>
+    </template>
+  </category>
+
+</aiml>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>CHECKING MY MEMORY ABOUT *</pattern>
+    <template>
+      <srai>RECALL MEMORIES <star/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>RECALL MEMORIES *</pattern>
+    <template>
+      Here's what I remember about <star/>:
+      <!-- This will be processed by the Python backend -->
+      <memory_recall><star/></memory_recall>
+    </template>
+  </category>
+
+</aiml>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+  <category>
+    <pattern>I AM MARRIED TO *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Thanks, I noted that you're married to <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>MY WIFE IS *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Got it! Your wife's name is <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>MY HUSBAND IS *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Got it! Your husband's name is <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE A WIFE NAMED *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Recorded your wife's name as <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HAVE A HUSBAND NAMED *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Recorded your husband's name as <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I GOT MARRIED TO *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Congratulations on your marriage with <star/>!
+    </template>
+  </category>
+
+  <category>
+    <pattern>MY married IS *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Got it! Your married is <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM THE married OF *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Okay! So you're the married of <star/>.
+    </template>
+  </category>
+
+  <!-- Fallback catch-all -->
+  <category>
+    <pattern>I AM THE HUSBAND OF *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Okay, your married is <star/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>I AM THE WIFE OF *</pattern>
+    <template>
+      <think>
+        <set name="relation">married</set>
+        <set name="person1"><star/></set>
+      </think>
+      Got it! You're married to <star/>.
+    </template>
+  </category>
+
+</aiml>

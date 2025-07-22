@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+<!--aiml version="2.0"-->
+
+<!-- Relationship -->
+<category>
+    <pattern>WHO IS * OF *</pattern>
+    <template>
+        <think>
+            <set name="rel"><lowercase><star index="1"/></lowercase></set>
+            <set name="person1"><lowercase><star index="2"/></lowercase></set>
+        </think>
+        <get name="person2"/> is the <get name="rel"/> of <get name="person1"/>.
+    </template>
+</category>
+
+<category>
+    <pattern>WHO IS THE * OF *</pattern>
+    <template>
+        <srai>WHO IS <star index="1"/> OF <star index="2"/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>TELL ME WHO IS * OF *</pattern>
+    <template>
+        <srai>WHO IS <star index="1"/> OF <star index="2"/></srai>
+    </template>
+</category>
+
+<category>
+    <pattern>CAN YOU TELL WHO IS * OF *</pattern>
+    <template>
+        <srai>WHO IS <star index="1"/> OF <star index="2"/></srai>
+    </template>
+</category>
+
+<!-- Date of Birth -->
+<category>
+    <pattern>WHAT IS THE DATE OF BIRTH OF *</pattern>
+    <template>
+        <think><set name="dob_person"><lowercase><star/></lowercase></set></think>
+        <random>
+            <li>The date of birth of <get name="dob_person"/> is <get name="dob"/>.</li>
+            <li><get name="dob_person"/>'s birth date is <get name="dob"/>.</li>
+            <li><get name="dob"/> is the date when <get name="dob_person"/> was born.</li>
+        </random>
+    </template>
+</category>
+
+<category><pattern>WHEN WAS * BORN</pattern><template><srai>WHAT IS THE DATE OF BIRTH OF <star/></srai></template></category>
+<category><pattern>WHAT IS DATE OF BIRTH OF *</pattern><template><srai>WHAT IS THE DATE OF BIRTH OF <star/></srai></template></category>
+<category><pattern>WHAT IS *'S DATE OF BIRTH</pattern><template><srai>WHAT IS THE DATE OF BIRTH OF <star/></srai></template></category>
+<category><pattern>WHEN IS *'S BIRTHDAY</pattern><template><srai>WHAT IS THE DATE OF BIRTH OF <star/></srai></template></category>
+
+<!-- Age -->
+<category>
+  <pattern>WHAT IS THE AGE OF *</pattern>
+  <template>
+    <think><set name="age_person"><lowercase><star/></lowercase></set></think>
+    <condition name="age">
+      <li value="unknown">I don't know the age of <get name="age_person"/>.</li>
+      <li><get name="age_person"/> is <get name="age"/> years old.</li>
+    </condition>
+  </template>
+</category>
+
+
+<category><pattern>HOW OLD IS *</pattern><template><srai>WHAT IS THE AGE OF <star/></srai></template></category>
+<category><pattern>WHAT IS *'S AGE</pattern><template><srai>WHAT IS THE AGE OF <star/></srai></template></category>
+<category><pattern>AGE OF *</pattern><template><srai>WHAT IS THE AGE OF <star/></srai></template></category>
+<category><pattern>CAN YOU TELL ME THE AGE OF *</pattern><template><srai>WHAT IS THE AGE OF <star/></srai></template></category>
+
+<!-- Gender -->
+<category>
+    <pattern>WHAT IS THE GENDER OF *</pattern>
+    <template>
+        <think><set name="gender_person"><lowercase><star/></lowercase></set></think>
+        <random>
+            <li>The gender of <get name="gender_person"/> is <get name="gender"/>.</li>
+            <li><get name="gender_person"/> is a <get name="gender"/>.</li>
+        </random>
+    </template>
+</category>
+
+<category><pattern>IS * MALE OR FEMALE</pattern><template><think><set name="gender_person"><lowercase><star/></lowercase></set></think><srai>WHAT IS THE GENDER OF <star/></srai></template></category>
+<category><pattern>IS * A BOY OR GIRL</pattern><template><srai>IS <star/> MALE OR FEMALE</srai></template></category>
+<category><pattern>IS * A MALE OR FEMALE</pattern><template><srai>IS <star/> MALE OR FEMALE</srai></template></category>
+<category><pattern>IS * BOY OR GIRL</pattern><template><srai>IS <star/> MALE OR FEMALE</srai></template></category>
+<category><pattern>CAN YOU TELL IF * IS A MALE OR FEMALE</pattern><template><srai>IS <star/> MALE OR FEMALE</srai></template></category>
+<category><pattern>TELL ME IF * IS MALE OR FEMALE</pattern><template><srai>IS <star/> MALE OR FEMALE</srai></template></category>
+<category><pattern>IS * MAN OR WOMAN</pattern><template><srai>IS <star/> MALE OR FEMALE</srai></template></category>
+
+</aiml>

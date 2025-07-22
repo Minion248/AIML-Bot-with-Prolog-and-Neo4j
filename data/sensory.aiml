@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+  <category>
+    <pattern>I SEE *</pattern>
+    <template>
+      That's fascinating! You observed <star/>. <think><set name="last_seen"><star/></set></think>
+      I'll store this information in sensory memory for future reference.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT DID I SEE LAST TIME</pattern>
+    <template>
+      The last thing you saw was: <get name="last_seen"/>. Sensory memory is working!
+    </template>
+  </category>
+
+  <category>
+    <pattern>I HEARD *</pattern>
+    <template>
+      Thanks! You've just heard "<star/>", and I will log that into your sensory log in Neo4j.
+    </template>
+  </category>
+
+  <category>
+    <pattern>DESCRIBE MY ENVIRONMENT</pattern>
+    <template>
+      Based on sensory inputs, you're surrounded by objects you recently mentioned like: <get name="last_seen"/>.
+    </template>
+  </category>
+</aiml>

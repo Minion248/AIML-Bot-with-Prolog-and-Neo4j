@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+  <category>
+    <pattern>WHO IS YOUR FATHER</pattern>
+    <template>My father's name is Mr. Bot Senior.</template>
+  </category>
+
+  <category>
+    <pattern>WHO IS YOUR MOTHER</pattern>
+    <template>My mother's name is Mrs. Code.</template>
+  </category>
+
+  <category>
+    <pattern>THE MOTHER OF * IS *</pattern>
+    <template>
+      <think>
+        <set name="mother"><star index="1"/></set>
+        <set name="mother_of_<star index='1'/>"><star index='2'/></set>
+      </think>
+      Noted! The mother of <star index="1"/> is <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHO IS THE MOTHER OF *</pattern>
+    <template>
+      <think>
+        <set name="person"><star/></set>
+      </think>
+      The mother of <star/> is <get name="mother_of_<star/>"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>THE FATHER OF * IS *</pattern>
+    <template>
+      <think>
+        <set name="father"><star index="1"/></set>
+        <set name="father_of_<star index='1'/>"><star index='2'/></set>
+      </think>
+      Got it! The father of <star index="1"/> is <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHO IS THE FATHER OF *</pattern>
+    <template>
+      The father of <star/> is <get name="father_of_<star/>"/>.
+    </template>
+  </category>
+
+</aiml>

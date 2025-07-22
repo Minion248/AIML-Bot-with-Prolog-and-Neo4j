@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+  <category>
+    <pattern>ADD FACT *</pattern>
+    <template>
+      Adding this fact to semantic memory.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS *</pattern>
+    <template>
+      Let me recall that from semantic memory...
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS GRAVITY</pattern>
+    <template>
+      Gravity is a force that attracts a body toward the center of the earth. I’ll add this to your semantic graph in Neo4j.
+    </template>
+  </category>
+
+  <category>
+    <pattern>DEFINE AI</pattern>
+    <template>
+      AI, or Artificial Intelligence, refers to machines that mimic human intelligence. It’s now stored in your semantic memory.
+    </template>
+  </category>
+
+  <category>
+    <pattern>DO YOU KNOW WHAT A COMPUTER IS</pattern>
+    <template>
+      Yes. A computer is an electronic device for storing and processing data. This knowledge resides in my semantic memory node.
+    </template>
+  </category>
+
+  <category>
+    <pattern>WHAT IS MEMORY</pattern>
+    <template>
+      Memory is the faculty by which the mind stores and remembers information. It's categorized as sensory, semantic, episodic, and procedural.
+    </template>
+  </category>
+</aiml>

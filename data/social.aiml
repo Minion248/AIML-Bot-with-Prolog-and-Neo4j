@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+  <!-- User Identity Management -->
+  <category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+      <think>
+        <set name="user_name"><star/></set>
+        <set name="user_known">true</set>
+      </think>
+      Hello <get name="user_name"/>! Nice to meet you.
+    </template>
+  </category>
+
+  <!-- Memory Recall -->
+  <category>
+    <pattern>WHAT IS MY NAME</pattern>
+    <template>
+      <condition name="user_known">
+        <li value="true">Your name is <get name="user_name"/></li>
+        <li>You haven't told me your name yet</li>
+      </condition>
+    </template>
+  </category>
+
+  <!-- Enhanced WHO AM I -->
+  <category>
+    <pattern>WHO AM I</pattern>
+    <template>
+      <condition name="user_known">
+        <li value="true">
+          You are <get name="user_name"/>
+          <condition name="user_gender">
+            <li value="female"> (female)</li>
+          </condition>
+          <condition name="user_birthday">
+            <li> born in <get name="user_birthday"/></li>
+          </condition>
+        </li>
+        <li>Please introduce yourself first</li>
+      </condition>
+    </template>
+  </category>
+</aiml>
+
+
+<category>
+  <pattern>REMEMBER ME</pattern>
+  <template>
+    <condition name="user_known">
+      <li value="true">
+        <!-- Full memory dump with timestamp -->
+        <think>
+          <set name="last_memory_access"><date/></set>
+        </think>
+        ⚡ Memory Core Access (ID: <id/>)
+        <br/>🔹 <get name="user_name"/>'s profile:
+        <condition name="user_gender">
+          <br/>- ♀️ Female (verified)
+        </condition>
+        <condition name="user_birthday">
+          <br/>- 🎂 <get name="user_birthday"/>
+        </condition>
+        <br/>📅 First met: <get name="first_met_date"/>
+        <br/>⏱ Last active: <get name="last_interaction"/>
+        <br/>💾 Storage: Neo4j Graph Node #<get name="user_id"/>
+      </li>
+      <li>
+        ❗ Memory Not Initialized
+        <br/>Please initialize with:
+        <br/>- "MY NAME IS ___"
+        <br/>- "I AM A [GENDER]"
+        <br/>- "MY BIRTHDAY IS ___"
+      </li>
+    </condition>
+  </template>
+</category>
